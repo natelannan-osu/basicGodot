@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://u170w185lonj"]
+
+[ext_resource type="Texture2D" uid="uid://d28bftmm5keev" path="res://sprites/trak2_tile1b.tga" id="1_2jt7p"]
+[ext_resource type="PackedScene" uid="uid://ndobxbu5dmmo" path="res://Scenes/robot.tscn" id="2_3vb07"]
+[ext_resource type="PackedScene" uid="uid://dsf125rcta6pl" path="res://Scenes/platform.tscn" id="3_115ju"]
+
+[node name="Level" type="Node2D"]
+position = Vector2(70, 0)
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(232, 358)
+scale = Vector2(3, 3)
+texture = ExtResource("1_2jt7p")
+
+[node name="background2" type="Sprite2D" parent="background"]
+position = Vector2(255, 0)
+texture = ExtResource("1_2jt7p")
+
+[node name="robot" parent="." instance=ExtResource("2_3vb07")]
+position = Vector2(74, 466)
+scale = Vector2(0.7, 0.7)
+
+[node name="Platform" parent="." instance=ExtResource("3_115ju")]
+position = Vector2(196, 576)
+scale = Vector2(2, 2)
+
+[node name="Platform2" parent="." instance=ExtResource("3_115ju")]
+position = Vector2(650, 508)
+scale = Vector2(2, 2)
